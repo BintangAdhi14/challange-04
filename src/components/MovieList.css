@@ -1,0 +1,73 @@
+/* MovieList.css */
+.movie-list {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .movie-list h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .movie-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .movie-card p {
+    font-size: 14px;
+    color: #555;
+  }
+
+  input{
+    background: transparent;
+    border-radius: 16px;
+    border-color: #ff1a1a;
+    width: 300px;
+    color: #FFFFFF;
+    margin: 20px auto; 
+    display: block;
+    padding:20px;
+  }
+
+  .link-back {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    text-decoration: none;
+    color: #fff; 
+  }
+  
+  .link-allmovies {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    padding: 20px;
+    text-decoration: none;
+    color: #0062ff; 
+  }
+  
