@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -7,7 +8,18 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Lakukan autentikasi disini (misal: kirim permintaan ke server atau cek di state)
+
+    const apiUrl = 'https://shy-cloud-3319.fly.dev/api/v1/auth/login';
+    
+    axios.post(apiUrl, { email, password })
+      .then(response => {
+        // Tangani respons sukses di sini (misal: menyimpan token)
+        console.log(response.data);
+      })
+      .catch(error => {
+        // Tangani kesalahan autentikasi di sini
+        console.error(error);
+      });
   };
 
   return (
