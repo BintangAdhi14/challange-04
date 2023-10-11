@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './MovieList.css';
+import Headline from './Headline';
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -53,6 +54,7 @@ const MovieList = () => {
   };
 
   return (
+
     <div className="movie-list">
       <h1>MovieList</h1>
       <input className='search-input'
@@ -61,6 +63,7 @@ const MovieList = () => {
         value={searchTerm}
         onChange={handleSearchChange}
       />
+      <Headline/>
       <div className="movie-grid">
         {movies.map(movie => (
           <div key={movie.id} className="movie-card">
@@ -75,6 +78,8 @@ const MovieList = () => {
           </div>
         ))}
         <Link to={'/AllMovies'}className='link-allmovies'> See All Movie </Link>
+        <Link to={'/Login'} className='link-login'><button type='primary'>Login</button></Link>
+        <Link to={'/Register'} className='link-register'><button type='primary'>Register</button></Link>
       </div>
     </div>
   );
